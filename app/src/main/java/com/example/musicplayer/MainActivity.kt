@@ -27,8 +27,10 @@ class MainActivity : AppCompatActivity() {
         playbtn.setOnClickListener {
             if (!mediaPlayer.isPlaying){
                 mediaPlayer.start()
+                playbtn.setBackgroundResource(R.drawable.pausebutton)
             }else{
                 mediaPlayer.pause()
+                playbtn.setBackgroundResource(R.drawable.playbutton)
             }
         }
         seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
